@@ -11,7 +11,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
@@ -212,7 +211,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 			}
 			Integer otherMessages = xMessages - addedLines;
 			if(otherMessages > 0){
-				inboxStyleNotif.setSummaryText("+ "+otherMessages+" more messages");
+				inboxStyleNotif.setSummaryText("+ "+otherMessages+" more");
 			}			
 		}
 		
