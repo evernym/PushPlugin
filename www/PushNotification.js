@@ -65,7 +65,7 @@ PushNotification.prototype.setApplicationIconBadgeNumber = function(successCallb
 };
 
 // Call this to remove unread messages from android PN's
-PushNotification.prototype.readConversation = function(successCallback, errorCallback, convIdsArr) {
+PushNotification.prototype.readConversation = function(successCallback, errorCallback, convId) {
     if (errorCallback == null) { errorCallback = function() {}}
 
     if (typeof errorCallback != "function")  {
@@ -78,7 +78,7 @@ PushNotification.prototype.readConversation = function(successCallback, errorCal
         return
     }
 
-    cordova.exec(successCallback, errorCallback, "PushPlugin", "readConversation", convIdsArr);
+    cordova.exec(successCallback, errorCallback, "PushPlugin", "readConversation", [{convId: convId}]);
 };
 
 // Call this to remove stored notifications, eg. logout (only for android)
