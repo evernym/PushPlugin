@@ -253,10 +253,6 @@ public class PushPlugin extends CordovaPlugin {
 				{
 					json.put(key, value);
 				}
-				else if (key.equals("noOfConversationsinNotification"))
-				{
-					json.put(key, extras.getInt("noOfConversationsinNotification"));
-				}
 				else if (key.equals("foreground"))
 				{
 					json.put(key, extras.getBoolean("foreground"));
