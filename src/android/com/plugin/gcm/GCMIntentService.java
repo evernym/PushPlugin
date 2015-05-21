@@ -277,7 +277,6 @@ public class GCMIntentService extends GCMBaseIntentService {
 		}
 		
 		mNotificationManager.notify((String) appName, notId, mBuilder.build());
-        PushPlugin.sendConversationPnHas(getApplicationContext());
 	}
 	
 	private static String getAppName(Context context)
